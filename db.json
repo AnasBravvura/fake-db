@@ -1,5 +1,5 @@
 {
-  "users": [
+  "profiles": [
         { "id":1,"name":"hasan", "age":54 },
         { "id":2,"name":"arzoo","age":50},
         { "id":3,"name":"faisal","age":30}
