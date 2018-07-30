@@ -2,7 +2,18 @@
   "users": [
     {
       "id": 1,
-      "title": "hello"
+      "name": "hasan",
+      "age": 54
+    },
+    {
+      "id": 2,
+      "name": "arzoo",
+      "age": 50
+    },
+    {
+      "id": 3,
+      "name": "faisal",
+      "age": 30
     }
   ]
 }
