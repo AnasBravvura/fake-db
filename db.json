@@ -1,19 +1,7 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "hasan",
-      "age": 54
-    },
-    {
-      "id": 2,
-      "name": "arzoo",
-      "age": 50
-    },
-    {
-      "id": 3,
-      "name": "faisal",
-      "age": 30
-    }
-  ]
+  "cars": [
+        { "name":"Ford", "models":"Mustang" },
+        { "name":"BMW", "models":"320" },
+        { "name":"Fiat", "models": "500"}
+    ]
 }
