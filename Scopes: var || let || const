@@ -1,0 +1,58 @@
+var vs let
+var keyword behaves differently in function scopes and block scopes
+A variable declared with var in a function scope can’t be accessed outside that function scope.
+
+function iHaveScope() {
+  var secret = 42;
+}
+secret; // ReferenceError: secret is not defined (in this scope)
+
+A variable declared with var in a block scope is available outside of that block scope.
+
+for (var i=0; i<10; i++) {
+  // block scope for the for statement
+}
+console.log(i) // => 10 
+
+Now even if in block scope u don't want your variable to get accessed outside, use let
+
+for (let i=0; i<10; i++) {
+  // block scope for the for statement
+}
+console.log(i) // ReferenceError: i is not defined 
+
+const vs let
+Declaring a variable with const is exactly like let - when it comes to scopes - but creates a constant reference for the variable.
+We can’t change the value of a constant reference. If we put a primitive value in a constant, that value will be protected from
+getting changed:
+
+const PI = 3.141592653589793
+PI = 42 // SyntaxError: "PI" is read-only
+
+Note that if the constant is an object, we can still change the properties of that object, so be careful about that:
+
+const dessert = { type: 'pie' };
+dessert.type = 'pudding'; // Sure thing
+console.log(dessert.type) // pudding
+We can’t however, reassign an object declared with const:
+
+const dessert = { type: 'pie' };
+dessert = { type: 'cake' }; // SyntaxError: "dessert" is read-only
+
+Constants are popularly used when importing things from other libraries so that they don’t get changed accidentally
+
+Constants are also great to use when defining functions, because we rarely need to update a function after we define it the first time.
+
+With const, you get the peace of mind that no mutating reassignments are happening on a variable, while with let/var,
+you’ll have to read the code to verify that:
+
+let answer = 42;
+// some code ...
+// answer MIGHT be 42 here, read the code to be sure.
+// ***
+// vs.
+// ***
+const answer = 42;
+// some code ...
+// answer IS STILL 42 here, no matter what happens above
+
